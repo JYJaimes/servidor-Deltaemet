@@ -45,8 +45,8 @@ io.on('connection', (socket) => {
     });
 });
 
-// IMPORTANTE: Escuchar en 0.0.0.0 para que sea accesible desde otros dispositivos
-const PORT = 3000;
+// Cambia la línea del puerto por esta:
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, '0.0.0.0', () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
